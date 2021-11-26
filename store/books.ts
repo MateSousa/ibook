@@ -36,7 +36,7 @@ export default class Books extends VuexModule {
     this.context.commit('SET_ALL', books)
   }
 
-  @Action
+  @Action({ rawError: true })
   public async show({ id }: Show) {
     const book = await $axios.$get(`/books/${id}`)
     this.context.commit('SET_SINGLE', book)
