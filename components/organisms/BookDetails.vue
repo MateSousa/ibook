@@ -22,6 +22,8 @@
   grid-gap: 1.4rem;
   @include screen('small', 'medium') {
     grid-template-columns: 1fr;
+    justify-content:center;
+    align-content: center;
   }
 }
 
